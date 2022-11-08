@@ -1,8 +1,10 @@
 import React from 'react';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (
-        <div className='flex justify-evenly items-center'>
+        <div>
+            <div className='flex justify-evenly items-center'>
             <div>
                 <h1 className='text-8xl font-semibold'>
                 The Best <br />
@@ -14,6 +16,13 @@ const Home = () => {
                 <img src="https://i.ibb.co/mSn1G3x/home.png" alt="" />
             </div>
         </div>
+        <div className='mt-16 text-center'>
+            <h2 className='text-4xl font-semibold mb-10'>Our Services</h2>
+            <Services></Services>
+        </div>
+
+        </div>
+        
     );
 };
 
