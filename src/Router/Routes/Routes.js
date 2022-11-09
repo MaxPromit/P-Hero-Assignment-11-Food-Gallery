@@ -6,6 +6,7 @@ import AllCardService from "../../Pages/Home/Services/AllCardService";
 import ServiceDetails from "../../Pages/Home/Services/ServiceDetails";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Login/Register";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 
 
 export const router = createBrowserRouter([
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/myreviews',
+                element: <MyReviews></MyReviews>
             },
             {
                 path: '/allCardService',
