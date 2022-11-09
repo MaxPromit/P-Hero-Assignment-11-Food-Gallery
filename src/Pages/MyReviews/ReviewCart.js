@@ -8,9 +8,9 @@ const ReviewCart = ({ review }) => {
   const { user } = useContext(AuthContex);
   return (
     <div className="flex justify-center">
-      <div class="px-8 w-1/2 my-3 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
-        <div class="flex items-center justify-between">
-          <span class="text-sm font-light text-gray-600 dark:text-gray-400">
+      <div className="px-8 w-1/2 my-3 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-light text-gray-600 dark:text-gray-400">
             Mar 10, 2019
           </span>
         <div>
@@ -20,35 +20,35 @@ const ReviewCart = ({ review }) => {
         </div>
         </div>
 
-        <div class="mt-2">
+        <div className="mt-2">
           <p
-            class="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline"
-            tabindex="0"
+            className="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline"
+            tabIndex="0"
             role="link"
           >
             {user?.title}
           </p>
-          <p class="mt-2 text-gray-600 dark:text-gray-300">{message}</p>
+          <p className="mt-2 text-gray-600 dark:text-gray-300">{message}</p>
         </div>
 
-        <div class="flex items-center justify-between mt-4">
+        <div className="flex items-center justify-between mt-4">
           <Link
-            class="text-blue-600 dark:text-blue-400 hover:underline"
-            tabindex="0"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
+            tabIndex="0"
             role="link"
           >
             Edit
           </Link>
 
-          <div class="flex items-center">
+          <div className="flex items-center">
             <img
-              class="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
+              className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block"
               src={user?.photoURL}
               alt="avatar"
             />
             <p
-              class="font-bold text-gray-700 cursor-pointer dark:text-gray-200"
-              tabindex="0"
+              className="font-bold text-gray-700 cursor-pointer dark:text-gray-200"
+              tabIndex="0"
               role="link"
             >
               {user?.displayName}

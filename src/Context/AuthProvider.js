@@ -20,12 +20,15 @@ const AuthProvider = ({children}) => {
         return signInWithEmailAndPassword(auth, email,password)
     }
     const logOut = () =>{
+        setLoading(true);
         return signOut(auth)
     }
     const googleSignUp = (provider)=>{
+        setLoading(true);
         return signInWithPopup(auth, provider)
     }
     const updateUserProfile = (profile)=>{
+        setLoading(true);
         return updateProfile(auth.currentUser, profile)
     }
     useEffect(()=>{

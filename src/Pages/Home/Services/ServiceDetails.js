@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContex } from '../../../Context/AuthProvider';
 
 const ServiceDetails = () => {
@@ -58,14 +58,14 @@ const ServiceDetails = () => {
 
       <div>
       <h2 className='text-3xl font-semibold text-center my-3'>Review This Item</h2>
-      <form onSubmit={handlerReviewSubmit}>
+      {user?.email ?    <form onSubmit={handlerReviewSubmit}>
       <div className='flex justify-center'>
       <textarea name='message' className="textarea textarea-info w-96" placeholder="Review"></textarea>
       </div>
       <div className='flex justify-center mb-3 mt-1'>
       <button className='btn' type="submit">Submit</button>
       </div>
-      </form>
+      </form> : <Link className='text-3xl text-center' to='/login'><h2>Please Login For Adding Message</h2></Link>}
       </div>
         </div>
     );
