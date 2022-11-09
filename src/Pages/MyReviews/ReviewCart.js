@@ -3,8 +3,8 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContex } from "../../Context/AuthProvider";
 
-const ReviewCart = ({ review }) => {
-  const { message } = review;
+const ReviewCart = ({ review, handlerDelete }) => {
+  const { message,_id} = review;
   const { user } = useContext(AuthContex);
   return (
     <div className="flex justify-center">
@@ -14,7 +14,7 @@ const ReviewCart = ({ review }) => {
             Mar 10, 2019
           </span>
         <div>
-        <button className="btn btn-square btn-sm text-red-500 bg-slate-300">
+        <button onClick={()=>handlerDelete(_id)} className="btn btn-square btn-sm text-red-500 bg-slate-300">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
       </button>
         </div>
