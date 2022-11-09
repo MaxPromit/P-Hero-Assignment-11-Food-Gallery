@@ -23,5 +23,4 @@ const AllCardServiceItems = ({product}) => {
       </div>
     );
 };
-
 export default AllCardServiceItems;
