@@ -4,16 +4,28 @@ import { AuthContex } from '../../Context/AuthProvider';
 import ReviewCart from './ReviewCart';
 
 const MyReviews = () => {
-    const { user } = useContext(AuthContex);
+    const { user, logOut } = useContext(AuthContex);
     const [reviewsItem, setReviewsItem] = useState([]);
     
     // console.log(ordersItem)
 
     useEffect(()=>{
-        fetch(`http://localhost:4000/reviews?email=${user?.email}`)
-        .then(res => res.json())
+        if(!user?.email){
+            return
+          }
+        fetch(`http://localhost:4000/reviews?email=${user?.email}`,{
+            headers: {
+                authorization : `Bearer ${localStorage.getItem('food-token')}`
+            }
+        })
+        .then((res) => {
+            if(res.status === 401 || res.status === 403){
+             return logOut()
+            }
+          return res.json()
+          })
         .then(data => setReviewsItem(data))
-    },[user?.email])
+    },[user?.email, logOut])
 
     const handlerDelete = id =>{
         const procedd = window.confirm('Are You Sure, To Delete This Item')
@@ -31,7 +43,7 @@ const MyReviews = () => {
                 }
             })
         }
-      }
+    }
     
     return (
         <div>

@@ -8,6 +8,7 @@ import ServiceDetails from "../../Pages/Home/Services/ServiceDetails";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Login/Register";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
+import UpdateReview from "../../Pages/MyReviews/UpdateReview";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
@@ -43,6 +44,10 @@ export const router = createBrowserRouter([
             {
                 path: '/allCardService',
                 element: <AllCardService></AllCardService>
+            },
+            {
+                path: '/updateReview',
+                element: <UpdateReview></UpdateReview>
             },
             {
                 path: '/serviceDetails/:id',

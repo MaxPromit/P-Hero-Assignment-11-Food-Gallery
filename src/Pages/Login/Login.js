@@ -20,8 +20,28 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
-            navigate(from, { replace: true });
-            form.reset();
+            const currentUser = {
+                email: user.email,
+              };
+              console.log(currentUser);
+      
+              // get jwt token
+      
+              fetch("http://localhost:4000/jwt", {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(currentUser),
+              })
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                // set local storage
+                localStorage.setItem("food-token", data.token);
+                navigate(from, { replace: true });
+                form.reset();
+              });
         })
         .catch(err=>console.error(err))
     }
