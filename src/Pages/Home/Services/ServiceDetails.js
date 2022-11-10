@@ -4,6 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContex } from '../../../Context/AuthProvider';
 
 const ServiceDetails = () => {
+  document.title = 'Food Gallery - Review';
     const {title,price,details,img,_id} = useLoaderData();
     const {user} = useContext(AuthContex)
 

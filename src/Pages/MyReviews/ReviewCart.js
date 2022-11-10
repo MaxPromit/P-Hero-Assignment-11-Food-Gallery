@@ -32,7 +32,7 @@ const ReviewCart = ({ review, handlerDelete }) => {
         </div>
 
         <div className="flex items-center justify-between mt-4">
-          <Link to='/updateReview'
+          <Link to={`/updateReview/${_id}`}
             className="text-blue-600 dark:text-blue-400 hover:underline"
             tabIndex="0"
             role="link"

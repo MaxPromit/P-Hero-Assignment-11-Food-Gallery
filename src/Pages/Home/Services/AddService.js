@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AddService = () => {
-
+    document.title = 'Food Gallery - Add Service';
     const handlerCreateService = (event) =>{
         event.preventDefault();
         const form = event.target;

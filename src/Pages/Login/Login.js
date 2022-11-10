@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContex } from '../../Context/AuthProvider';
 
 const Login = () => {
+    document.title = 'Food Gallery - Login';
     const {logIn} = useContext(AuthContex);
     const navigate = useNavigate();
     const location = useLocation();

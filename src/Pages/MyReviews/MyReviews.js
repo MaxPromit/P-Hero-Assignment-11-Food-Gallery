@@ -4,6 +4,7 @@ import { AuthContex } from '../../Context/AuthProvider';
 import ReviewCart from './ReviewCart';
 
 const MyReviews = () => {
+    document.title = 'Food Gallery - Review List';
     const { user, logOut } = useContext(AuthContex);
     const [reviewsItem, setReviewsItem] = useState([]);
     

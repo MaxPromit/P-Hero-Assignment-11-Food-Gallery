@@ -43,11 +43,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/allCardService',
-                element: <AllCardService></AllCardService>
+                element: <PrivateRoute><AllCardService></AllCardService></PrivateRoute>
             },
             {
                 path: '/updateReview',
                 element: <UpdateReview></UpdateReview>
+            },
+            {
+                path: '/updateReview/:id',
+                element: <UpdateReview></UpdateReview>,
+                // loader: ({params})=> fetch(`http://localhost:4000/reviews/${params.id}`)
             },
             {
                 path: '/serviceDetails/:id',

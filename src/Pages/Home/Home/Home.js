@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ConnectWithUs from '../../ConnectWithUs/ConnectWithUs';
+import CustomerReview from '../../CustomerReview/CustomerReview';
 import Services from '../Services/Services';
 
 const Home = () => {
+    document.title = 'Food Gallery - Home';
     return (
         <div>
             <div className='flex justify-evenly items-center'>
@@ -25,6 +28,12 @@ const Home = () => {
             <div className='my-10'>
                 <Link to='/allCardService'><button className='btn btn-info'>See All</button></Link>
             </div>
+        </div>
+        <div className='my-10'>
+            <CustomerReview></CustomerReview>
+        </div>
+        <div className='my-10'>
+            <ConnectWithUs></ConnectWithUs>
         </div>
 
         </div>
