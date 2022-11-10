@@ -1,3 +1,24 @@
+# Some features and functionalities of our websit.
+
+Its Besically A Food Delevary Website , You Can Order Food Any time Of the day.
+1. We Provide Fresh Food.
+2. We Don't compromise with the quality of the product
+3. Its very healthy for the consumers 
+4. We have very fast delevary service
+5. within 20min aproximetly we can provide food
+
+Some information about our website
+
+Its a React Website. We Use many tailwind componet lybrais like Daiysu Yi, Meraki Ui. For Authentication we use Firebase And lastly we you vercel for deploy our server site...
+
+# Our Live Site Link: 
+https://food-gallery-8a206.web.app/
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

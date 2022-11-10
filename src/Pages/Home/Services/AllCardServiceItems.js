@@ -8,17 +8,17 @@ const AllCardServiceItems = ({ product }) => {
   const { img, price, title, details, _id } = product;
   return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
-       <PhotoProvider>
        
+    <PhotoProvider>
       <div className="foo">
-      
-          <PhotoView key={_id} src={img}>
-            <img src={img} alt="" style={{ objectFit: 'cover' }}/>
+        
+          <PhotoView src={img}>
+            <img src={img} alt="" />
           </PhotoView>
         
       </div>
-       
     </PhotoProvider>
+    {/* <img src={img} alt="" /> */}
 
       <div className="card-body">
         <h2 className="card-title">{title}</h2>

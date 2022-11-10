@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
 import { AuthContex } from '../../Context/AuthProvider';
 import ReviewCart from './ReviewCart';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyReviews = () => {
     document.title = 'Food Gallery - Review List';
@@ -38,20 +40,20 @@ const MyReviews = () => {
             .then(data =>{
                 console.log(data);
                 if(data.deletedCount){
-                    alert('Deleted Successfully')
+                    toast('Deleted Successfully')
                     const remaining = reviewsItem.filter(ord => ord._id !== id)
                     setReviewsItem(remaining)
                 }
             })
         }
     }
-    
+    console.log(reviewsItem.length)
     return (
-        <div>
+        <div><ToastContainer></ToastContainer>
             <h2 className='text-center text-3xl font-semibold'>Our Reviews</h2>
 
             <div>
-                {reviewsItem.map(review => <ReviewCart key={review._id} review={review} handlerDelete={handlerDelete}></ReviewCart>)}
+                {reviewsItem.length === 0 ? <h2 className='text-3xl text-center font-semibold'>No reviews were added</h2> : reviewsItem.map(review => <ReviewCart key={review._id} review={review} handlerDelete={handlerDelete}></ReviewCart>)}
             </div>
         </div>
     );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddService = () => {
     document.title = 'Food Gallery - Add Service';
@@ -26,17 +28,16 @@ const AddService = () => {
       .then(res => res.json())
       .then(data => {
         if(data.acknowledged){
-          alert("User Added Successfully")
-          form.reset();
+        toast('Successfully Service Added')
+        form.reset();
       }
         console.log(data)
       })
       .catch(err => console.error(err))
-
-        
     }
     return (
         <div>
+            <ToastContainer></ToastContainer>
            <h2 className='text-3xl font-semibold text-center'>Add Services</h2>
 
            <div>

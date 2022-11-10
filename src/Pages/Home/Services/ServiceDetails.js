@@ -1,6 +1,8 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { AuthContex } from '../../../Context/AuthProvider';
 
 const ServiceDetails = () => {
@@ -31,7 +33,7 @@ const ServiceDetails = () => {
       .then(res => res.json())
       .then(data => {
         if(data.acknowledged){
-          alert("User Added Successfully")
+          toast("Review Added Successfully")
           form.reset();
       }
         console.log(data)
@@ -40,6 +42,7 @@ const ServiceDetails = () => {
     }
     return (
         <div>
+          <ToastContainer></ToastContainer>
             <h2 className='text-3xl font-semibold text-center'>Service Details Section</h2>
             <div className="card card-compact w-96 bg-base-100 shadow-xl mx-auto mt-5">
         <figure><img src={img} alt="Shoes" /></figure>

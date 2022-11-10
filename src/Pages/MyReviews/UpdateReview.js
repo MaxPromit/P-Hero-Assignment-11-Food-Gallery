@@ -1,5 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateReview = () => {
     document.title = 'Food Gallery - Edit Review';
@@ -20,7 +22,8 @@ const UpdateReview = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            toast('Message Updated')
         })
 
     }
@@ -30,6 +33,7 @@ const UpdateReview = () => {
     
     return (
         <div>
+            <ToastContainer></ToastContainer>
         <h2 className='text-3xl font-semibold text-center my-3'>Review This Item</h2>
         <form onSubmit={handlerReviewSubmit}>
         <div className='flex justify-center'>

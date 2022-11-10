@@ -7,7 +7,8 @@ const ReviewCart = ({ review, handlerDelete }) => {
   const { message,_id} = review;
   const { user } = useContext(AuthContex);
   return (
-    <div className="flex justify-center">
+    <div>
+      <div className="flex justify-center">
       <div className="px-8 w-1/2 my-3 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
         <div className="flex items-center justify-between">
           <span className="text-sm font-light text-gray-600 dark:text-gray-400">
@@ -56,6 +57,7 @@ const ReviewCart = ({ review, handlerDelete }) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
