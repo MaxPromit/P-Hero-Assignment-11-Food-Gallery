@@ -16,7 +16,7 @@ const MyReviews = () => {
         if(!user?.email){
             return
           }
-        fetch(`http://localhost:4000/reviews?email=${user?.email}`,{
+        fetch(`https://food-gallery-server.vercel.app/reviews?email=${user?.email}`,{
             headers: {
                 authorization : `Bearer ${localStorage.getItem('food-token')}`
             }
@@ -33,7 +33,7 @@ const MyReviews = () => {
     const handlerDelete = id =>{
         const procedd = window.confirm('Are You Sure, To Delete This Item')
         if(procedd){
-            fetch(`http://localhost:4000/reviews/${id}`, {
+            fetch(`https://food-gallery-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

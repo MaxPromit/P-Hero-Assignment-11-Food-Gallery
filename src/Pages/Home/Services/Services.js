@@ -8,7 +8,7 @@ const Services = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:4000/limit/services')
+        fetch('https://food-gallery-server.vercel.app/limit/services')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])

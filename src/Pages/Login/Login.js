@@ -28,7 +28,7 @@ const Login = () => {
       
               // get jwt token
       
-              fetch("http://localhost:4000/jwt", {
+              fetch("https://food-gallery-server.vercel.app/jwt", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",

@@ -23,7 +23,7 @@ const ServiceDetails = () => {
         message,
 
       }
-      fetch('http://localhost:4000/reviews', {
+      fetch('https://food-gallery-server.vercel.app/reviews', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
