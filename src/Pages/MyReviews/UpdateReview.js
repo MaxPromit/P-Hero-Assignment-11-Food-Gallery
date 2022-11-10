@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const UpdateReview = () => {
@@ -17,7 +16,7 @@ const UpdateReview = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(reviewUpdateMessage)
+            body: JSON.stringify({message: reviewUpdateMessage})
         })
         .then(res => res.json())
         .then(data => {
