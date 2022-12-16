@@ -5,13 +5,13 @@ const AllCardService = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('https://food-gallery-server.vercel.app/services')
+        fetch('http://localhost:4000/services')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-16 my-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:m-0 lg:m-0 m-16'>
             {products.map(product => <AllCardServiceItems key={product._id} product={product}></AllCardServiceItems>)}
         </div>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-
+import './style.css'
 const AllCardServiceItems = ({ product }) => {
   document.title = "Food Gallery - Services";
   const { img, price, title, details, _id } = product;
@@ -13,11 +13,11 @@ const AllCardServiceItems = ({ product }) => {
       <div className="foo">
         
           <PhotoView src={img}>
-            <img src={img} alt="" />
+            <img className="object-cover w-96 h-64 rounded-lg" src={img} alt="" />
           </PhotoView>
         
       </div>
-    </PhotoProvider>
+    </PhotoProvider> 
     {/* <img src={img} alt="" /> */}
 
       <div className="card-body">
@@ -31,7 +31,7 @@ const AllCardServiceItems = ({ product }) => {
           </div>
           <div>
             <Link to={`/serviceDetails/${_id}`}>
-              <button className="btn btn-primary">View Details</button>
+              <button className="btn color-btn">View Details</button>
             </Link>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Blog = () => {
         Some Burning Questions
       </h2>
       <div className="text-center">
-        <div className="border border-red-600 w-full my-3">
+        <div className="border border-white p-3 w-full my-3">
           <h3 className="text-2xl mb-3">1. Difference between SQL and NoSQL</h3>
           <p>
             SQL databases are vertically scalable, while NoSQL databases are
@@ -18,7 +18,7 @@ const Blog = () => {
             better for unstructured data like documents or JSON.
           </p>
         </div>
-        <div className="border border-red-600 w-full my-3">
+        <div className="border border-white p-3 w-full my-3">
           <h3 className="text-2xl mb-3">
             2. What is JWT, and how does it work?
           </h3>
@@ -34,7 +34,7 @@ const Blog = () => {
             with.
           </p>
         </div>
-        <div className="border border-red-600 w-full my-3">
+        <div className="border border-white p-3 w-full my-3">
           <h3 className="text-2xl mb-3">
          3. What is the difference between javascript and NodeJS?
 
@@ -43,7 +43,7 @@ const Blog = () => {
           JavaScript is a simple programming language that can be used with any browser that has the JavaScript Engine installed. Node. js, on the other hand, is an interpreter or execution environment for the JavaScript programming language. To summarize, Node. js is a cross-platform JavaScript runtime environment for servers and applications. It is built on a single-threaded, non-blocking event loop, the Google Chrome V8 JavaScript engine, and a low-level I/O API
           </p>
         </div>
-        <div className="border border-red-600 w-full my-3">
+        <div className="border border-white p-3 w-full my-3">
           <h3 className="text-2xl mb-3">
           4. How does NodeJS handle multiple requests at the same time?
           </h3>

@@ -3,7 +3,7 @@ import React from 'react';
 const CustomerReview = () => {
     return (
         <div>
-            <section className="bg-white dark:bg-gray-900">
+            <section className="bg-white dark:bg-gray-800 rounded-lg">
     <div className="container px-6 py-10 mx-auto">
         <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize xl:text-5xl lg:text-4xl dark:text-white">
             What our <span className="text-blue-500 ">clients</span> say

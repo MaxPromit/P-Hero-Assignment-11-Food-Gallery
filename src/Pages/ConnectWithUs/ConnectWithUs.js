@@ -2,28 +2,25 @@ import React from 'react';
 
 const ConnectWithUs = () => {
     return (
-        <div>
-            <section className="bg-white dark:bg-gray-900">
-                <h2 className='text-5xl p-3 font-semibold text-white text-center'>Contact Us</h2>
-    <div className="container px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-3xl font-semibold tracking-tight text-gray-800 xl:text-4xl dark:text-white">
-            For Any Kind Of Urgent Information Contact Us With Via Email
-        </h2>
-
-        <div className="mt-8 lg:mt-0">
-            <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
-                <input id="email" type="text" className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Email Address"/>
-
-                <button className="px-4 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-700 rounded-md focus:ring focus:ring-blue-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
-                    Get Started
-                </button>
+        <section className="flex flex-col max-w-4xl mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-900 md:flex-row md:h-48">
+        <div className="md:flex md:items-center md:justify-center md:w-1/2 md:bg-gray-700 md:dark:bg-gray-900">
+            <div className="px-6 py-6 md:px-8 md:py-0">
+                <h2 className="text-lg font-bold text-gray-700 dark:text-white md:text-gray-100">Sign Up For <span className="text-blue-600 dark:text-blue-400 md:text-blue-300">Project</span> Updates</h2>
+    
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 md:text-gray-400">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur obcaecati odio</p>
             </div>
-
-            <p className="mt-3 text-sm text-gray-500 dark:text-gray-300">Attention! Offer expires in 30 days. Make sure not to miss this opportunity</p>
         </div>
-    </div>
-</section>
+    
+        <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
+            <form>
+                <div className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
+                    <input className="px-6 py-2 text-gray-700 placeholder-gray-500 bg-white outline-none dark:bg-gray-900 dark:placeholder-gray-400 focus:placeholder-transparent dark:focus:placeholder-transparent" type="text" name="email" placeholder="Enter your email" aria-label="Enter your email"/>
+    
+                    <button className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">subscribe</button>
+                </div>
+            </form>
         </div>
+    </section>
     );
 };
 

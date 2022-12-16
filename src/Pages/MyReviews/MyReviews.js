@@ -16,7 +16,7 @@ const MyReviews = () => {
         if(!user?.email){
             return
           }
-        fetch(`https://food-gallery-server.vercel.app/reviews?email=${user?.email}`,{
+        fetch(`http://localhost:4000/reviews?email=${user?.email}`,{
             headers: {
                 authorization : `Bearer ${localStorage.getItem('food-token')}`
             }
@@ -33,7 +33,7 @@ const MyReviews = () => {
     const handlerDelete = id =>{
         const procedd = window.confirm('Are You Sure, To Delete This Item')
         if(procedd){
-            fetch(`https://food-gallery-server.vercel.app/reviews/${id}`, {
+            fetch(`http://localhost:4000/reviews/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -52,7 +52,7 @@ const MyReviews = () => {
         <div><ToastContainer></ToastContainer>
             <h2 className='text-center text-3xl font-semibold'>Our Reviews</h2>
 
-            <div>
+            <div className='h-96'>
                 {reviewsItem.length === 0 ? <h2 className='text-3xl text-center font-semibold'>No reviews were added</h2> : reviewsItem.map(review => <ReviewCart key={review._id} review={review} handlerDelete={handlerDelete}></ReviewCart>)}
             </div>
         </div>

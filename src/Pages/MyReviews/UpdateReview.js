@@ -13,7 +13,7 @@ const UpdateReview = () => {
         const reviewUpdateMessage = form.message.value;
         console.log(id);
 
-        fetch(`https://food-gallery-server.vercel.app/reviews/${id}`, {
+        fetch(`http://localhost:4000/reviews/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

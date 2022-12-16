@@ -53,12 +53,12 @@ export const router = createBrowserRouter([
             {
                 path: '/updateReview/:id',
                 element: <UpdateReview></UpdateReview>,
-                // loader: ({params})=> fetch(`https://food-gallery-server.vercel.app/reviews/${params.id}`)
+                // loader: ({params})=> fetch(`http://localhost:4000/reviews/${params.id}`)
             },
             {
                 path: '/serviceDetails/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({params})=> fetch(`https://food-gallery-server.vercel.app/services/${params.id}`)
+                loader: ({params})=> fetch(`http://localhost:4000/services/${params.id}`)
             },
             {
                 path: '*',

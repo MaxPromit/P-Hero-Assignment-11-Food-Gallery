@@ -1,0 +1,40 @@
+.color-btn{
+    background-color: #5E48CA;
+}
+.color-see{
+    background-color: #0081CF;
+    color: white;
+}
+:hover.color-see{
+    background-color: #5E48CA;
+}
+.cake{
+    background-image: url('https://i.ibb.co/H4FY4GZ/brownie-dessert-cake-sweet-45202.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vegitable{
+    background-image: url('https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sup{
+    background-image: url('https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.drink{
+    background-image: url('https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.font-lexend{
+    font-family: 'Lexend', sans-serif;
+
+}
+.line{
+    line-height: 85px;
+}
+.resturant{
+    color: #5E48CA;
+}
